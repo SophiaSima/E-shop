@@ -1,0 +1,42 @@
+@import './variables.scss';
+
+@font-face {
+    font-family: 'OpenSans-Regular';
+    src: url('../fonts/OpenSans-Regular.ttf');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'OpenSans-SemiBold';
+    src: url('../fonts/OpenSans-SemiBold.ttf');
+    font-weight: 600;
+    font-style: normal;
+}
+
+html,
+body,
+div,
+a,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+ul,
+li,
+span,
+form,
+input,
+select,
+button {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    position: relative;
+    box-sizing: border-box;
+}

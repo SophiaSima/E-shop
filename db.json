@@ -1,0 +1,99 @@
+{"cardsData": [
+    {
+      "article": "000111",
+      "img": "bed1.png",
+      "type": "Кровать",
+      "title": "Mary",
+      "stock": true,
+      "price": "2999"
+    },
+    {
+      "article": "000112",
+      "img": "bed2.png",
+      "type": "Кровать",
+      "title": "Mike",
+      "stock": false,
+      "price": "3599"
+    },
+    {
+      "article": "000113",
+      "img": "bed3.png",
+      "type": "Кровать",
+      "title": "Family",
+      "stock": true,
+      "price": "4699"
+    },
+    {
+      "article": "000121",
+      "img": "chair1.png",
+      "type": "Стул",
+      "title": "Genry",
+      "stock": true,
+      "price": "599"
+    },
+    {
+      "article": "000122",
+      "img": "chair2.png",
+      "type": "Стул",
+      "title": "Mikky",
+      "stock": true,
+      "price": "1299"
+    },
+    {
+      "article": "000123",
+      "img": "chair3.png",
+      "type": "Стул",
+      "title": "Alice",
+      "stock": true,
+      "price": "1000"
+    },
+    {
+      "article": "000131",
+      "img": "sofa1.png",
+      "type": "Диван",
+      "title": "Igor",
+      "stock": false,
+      "price": "9999"
+    },
+    {
+      "article": "000132",
+      "img": "sofa2.png",
+      "type": "Диван",
+      "title": "Sasha",
+      "stock": false,
+      "price": "2999"
+    },
+    {
+      "article": "000133",
+      "img": "sofa3.png",
+      "type": "Диван",
+      "title": "Mila",
+      "stock": true,
+      "price": "5699"
+    },
+    {
+      "article": "000211",
+      "img": "table1.png",
+      "type": "Стол",
+      "title": "Irina",
+      "stock": false,
+      "price": "1299"
+    },
+    {
+      "article": "000212",
+      "img": "table2.png",
+      "type": "Стол",
+      "title": "Georgy",
+      "stock": true,
+      "price": "3999"
+    },
+    {
+      "article": "000213",
+      "img": "table3.png",
+      "type": "Стол",
+      "title": "Maska",
+      "stock": true,
+      "price": "8999"
+    }
+  ]
+}
