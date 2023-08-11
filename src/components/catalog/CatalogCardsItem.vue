@@ -9,7 +9,7 @@
             <p class="card__price text_bold">{{ card.price }} &#8381;</p>
             <button 
             class="card__btn__add_in_cart text" 
-            @click="sendArticle">
+            @click="addToCart">
                 <span>Добавить в корзину</span>
             </button>
         </div>
@@ -27,8 +27,8 @@ export default {
         }
     },
     methods: {
-        sendArticle() {
-            this.$emit('sendArticle', this.card.article);
+        addToCart() {
+            this.$emit('addToCart', this.card);
         }
     },
 }

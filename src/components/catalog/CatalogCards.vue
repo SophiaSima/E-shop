@@ -5,7 +5,7 @@
             v-for="card in CARDSDATA"
             :card="card"
             :key="card.article"
-            @sendArticle="showChildArticle"
+            @addToCart="addToCart"
             />
         </div>
     </section>
@@ -28,11 +28,11 @@ export default ({
     },
     methods: {
         ...mapActions([
-            'GET_CARDSDATA_FROM_API'
+            'GET_CARDSDATA_FROM_API',
+            'ADD_TO_CART'
         ]),
-
-        showChildArticle(data) {
-            console.log(data);
+        addToCart(data) {
+            this.ADD_TO_CART(data)
         },
     },
     mounted() {

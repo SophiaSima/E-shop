@@ -1,11 +1,10 @@
 <template>
-    <div class="catalog_page">
+    <div class="cart_page">
         <HeaderComponent />
         <CartComponent
-        v-if="CART.length"
-        :cart_data="CART"
+            v-if="CART.length"
+            :cart_data="CART"
         />
-        <CatalogCards/>
         <FooterComponent />
     </div>
 </template>
@@ -13,16 +12,14 @@
 <script>
 import HeaderComponent from '@/components/header/HeaderComponent.vue';
 import CartComponent from '@/components/cart/CartComponent.vue';
-import CatalogCards from '@/components/catalog/CatalogCards.vue';
 import FooterComponent from '@/components/footer/FooterComponent.vue';
 import { mapGetters } from 'vuex';
 
 export default({
-    name: 'CatalogPage',
+    name: 'CartPage',
     components: {
         HeaderComponent,
         CartComponent,
-        CatalogCards,
         FooterComponent,
     },
     computed: {
@@ -30,6 +27,5 @@ export default({
             'CART'
         ])
     }
-
 })
 </script>

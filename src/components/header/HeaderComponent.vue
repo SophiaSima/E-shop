@@ -5,7 +5,7 @@
             <div class="header__menu">
                 <router-link to="/" class="header__link text">О КОМПАНИИ</router-link>
                 <router-link to="/catalog" class="header__link text">КАТАЛОГ</router-link>
-                <router-link to="/" class="header__link text">КОРЗИНА</router-link>
+                <router-link to="/cart" class="header__link text">КОРЗИНА</router-link>
                 <div class="header__wrap">
                     <a href="tel:+79991234567" class="header__phone__link text">+7(999)-123-45-67</a>
                     <a href="tel:+78121234567" class="header__phone__link text">+7(812)-123-45-67</a>

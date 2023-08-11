@@ -7,15 +7,38 @@ Vue.use(Vuex);
 export default new Vuex.Store({
   state: {
     cardsData: [],
+    cart: [],
   },
   getters: {
     CARDSDATA(state) {
       return state.cardsData;
     },
+    CART(state) {
+      return state.cart;
+    },
   },
   mutations: {
     SET_CARDSDATA_TO_STATE: (state, cardsData) => {
       state.cardsData = cardsData;
+    },
+    SET_CART: (state, cardsData) => {
+      if (state.cart.length) {
+        let isCardsDataInCart = false;
+        state.cart.map(function (item) {
+          if (item.article === cardsData.article) {
+            isCardsDataInCart = true;
+            item.quantity++;
+          }
+        });
+        if (!isCardsDataInCart) {
+          state.cart.push(cardsData);
+        }
+      } else {
+        state.cart.push(cardsData);
+      }
+    },
+    REMOVE_FROM_CART: (state, index) => {
+      state.cart.splice(index, 1);
     },
   },
   actions: {
@@ -34,6 +57,14 @@ export default new Vuex.Store({
           console.log(error);
           return error;
         });
+    },
+
+    ADD_TO_CART({ commit }, cardsData) {
+      commit("SET_CART", cardsData);
+    },
+
+    DELETE_FROM_CART({ commit }, index) {
+      commit("REMOVE_FROM_CART", index);
     },
   },
   modules: {},
