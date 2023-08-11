@@ -11,8 +11,11 @@
                 <p class="cart__item__article text">Артикул {{cart_item.article}}</p>
             </div>
         </div>
-        <div class="cart__item__quatity text">{{cart_item.quantity}}</div>
-        <button @click="deleteFromCart">Delete</button>
+        <div class="cart__item__quatity text">
+            <span class="text_bold" @click="decrementItem">-</span> 
+            {{cart_item.quantity}} 
+            <span class="text_bold" @click="incrementItem">+</span></div>
+        <button @click="deleteFromCart" class="cart__item__delete_btn"><span></span></button>
     </div>
 </template>
 
@@ -28,6 +31,14 @@ export default {
         }
     },
     methods:{
+        decrementItem(){
+            this.$emit('decrement')
+        },
+
+        incrementItem(){
+            this.$emit('increment')
+        },
+
         deleteFromCart() {
             this.$emit('deleteFromCart')
         }
@@ -44,6 +55,7 @@ export default {
     justify-content: space-around;
     align-items: center;
     padding: 10px;
+    margin-bottom: 40px;
     box-sizing: border-box;
     -webkit-box-shadow: 6px 6px 21px -12px $color-decoration;
         -moz-box-shadow: 6px 6px 21px -12px $color-decoration;
@@ -82,6 +94,32 @@ export default {
         font-size: 0.75rem;
         margin-bottom: 10px;
         color: $color-text;
+    }
+
+    &__quatity{
+        font-size: 1.5rem;
+
+        span{
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid $color-text;
+            border-radius: 5px;
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+            user-select: none;
+        }
+    }
+
+    &__delete_btn{
+        border: none;
+        background-color: white;
+        cursor: pointer;
+    }
+    &__delete_btn span{
+        width: 30px;
+        content: url('../../assets/img/delete.svg');
     }
 }
 </style>

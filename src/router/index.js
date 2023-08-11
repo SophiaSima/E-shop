@@ -21,6 +21,7 @@ const routes = [
     path: "/cart",
     name: "cart",
     component: CartPage,
+    props: true,
   },
 ];
 

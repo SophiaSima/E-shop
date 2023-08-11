@@ -47,6 +47,7 @@ export default({
 
 }
 .footer__catalog__list{
+    flex-shrink: 0;
     list-style-type: none;
     display: flex;
     justify-content: space-between;
