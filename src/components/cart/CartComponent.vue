@@ -1,8 +1,7 @@
 <template>
     <section class="cart">
         <div class="cart__contaier container">
-            <!-- НЕ РАБОТАЕТ -->
-            <p class="cart__empty text_bold" v-if="!cart_data">Вы ничего не добавили в корзину...</p>
+            <p class="cart__empty text_bold" v-if="!cart_data.length">Вы ничего не добавили в корзину...</p>
             <CartComponentItem
                 v-for="(cart_item, index) in cart_data"
                 :key="cart_item.article"
@@ -78,5 +77,8 @@ export default {
 .cart__total{
     text-align: end;
     font-size: 1.25rem;
+}
+.cart__empty{
+    height: 29vh;
 }
 </style>

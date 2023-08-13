@@ -31,6 +31,10 @@ export default {
             this.$emit('addToCart', this.card);
         }
     },
+    mounted() {
+        this.$set(this.card, 'quantity', 1)
+    }
+
 }
 </script>
 

@@ -2,7 +2,6 @@
     <div class="cart_page">
         <HeaderComponent />
         <CartComponent
-            v-if="CART.length"
             :cart_data="CART"
         />
         <FooterComponent />
